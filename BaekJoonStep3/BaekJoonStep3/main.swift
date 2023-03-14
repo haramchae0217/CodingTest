@@ -99,24 +99,41 @@ import Foundation
  10000 6
  5000 8 */
 // 풀이 :
-let totalMoney = Int(readLine()!)!
-let itemCount = Int(readLine()!)!
-var itemArr: [(Int, Int)] = []
-var sum = 0
+//let totalMoney = Int(readLine()!)!
+//let itemCount = Int(readLine()!)!
+//var itemArr: [(Int, Int)] = []
+//var sum = 0
+//
+//for _ in 0...itemCount - 1 {
+//    let line = readLine()!
+//    let lineArr = line.components(separatedBy: " ")
+//    itemArr.append((Int(lineArr[0])!, Int(lineArr[1])!))
+//}
+//
+//for i in 0...itemCount - 1 {
+//    sum += itemArr[i].0 * itemArr[i].1
+//}
+//
+//if(sum == totalMoney) {
+//    print("Yes")
+//} else {
+//    print("No")
+//}
 
-for _ in 0...itemCount - 1 {
-    let line = readLine()!
-    let lineArr = line.components(separatedBy: " ")
-    itemArr.append((Int(lineArr[0])!, Int(lineArr[1])!))
+// 문제 : 코딩은 체육과목입니다.
+// 입력 : 첫 번째 줄에는 문제의 정수 N이 주어진다. (4 <= N <= 1000; N은 4의 배수)
+// 출력 : 혜아가 N바이트 정수까지 저장할 수 있다고 생각하는 정수 자료형의 이름을 출력하여라
+// 예제 입력1 : 4
+// 예제 출력1 : long int
+// 예제 입력2 : 20
+// 예제 출력2 : long long long long long int
+// 풀이 :
+let n = Int(readLine()!)!
+
+if(n >= 4 && n <= 1000 && n % 4 == 0) {
+    let longCount = n / 4
+    for _ in 1...longCount {
+        print("long", terminator: " ")
+    }
+    print("int")
 }
-
-for i in 0...itemCount - 1 {
-    sum += itemArr[i].0 * itemArr[i].1
-}
-
-if(sum == totalMoney) {
-    print("Yes")
-} else {
-    print("No")
-}
-
