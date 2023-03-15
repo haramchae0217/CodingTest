@@ -205,7 +205,7 @@ import Foundation
 // 입력 : 첫째 줄에 테스트 케이스의 개수T가 주어진다.
 //       각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
 // 출력 : 각 테스트 케이스 마다 "Case #x : "를 출력한 다음, A+B를 출력한다. 테스트 케이스 번호는 1부터 시작한다.
-
+// 풀이 :
 //let count = Int(readLine()!)!
 //var addArr: [(Int,Int)] = []
 //
@@ -228,7 +228,7 @@ import Foundation
 //       각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
 // 출력 : 각 테스트 케이스 마다 "Case #x: A + B = C"형식으로 출력한다.
 //       x는 테스트 케이스 번호이고 1부터 시작하며, C는 A+B이다.
-
+// 풀이 :
 //let count = Int(readLine()!)!
 //var addArr: [(Int,Int)] = []
 //
@@ -245,3 +245,16 @@ import Foundation
 //for i in 0...count - 1 {
 //    print("Case #\(i+1): \(addArr[i].0) + \(addArr[i].1) = \(addArr[i].0 + addArr[i].1)")
 //}
+
+// 문제 : 첫째 줄에는 별 1개, 둘째 줄에는 별 2개, n개 줄에는 별 n개를 찍는 문제
+// 입력 : 첫째 줄에 N(1 <= N <= 100)이 주어진다.
+// 출력 : 첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.
+// 풀이 :
+let n = Int(readLine()!)!
+
+for i in 1...n {
+    for j in 1...i {
+        print("*", terminator: "")
+    }
+    print("")
+}
