@@ -128,12 +128,77 @@ import Foundation
 // 예제 입력2 : 20
 // 예제 출력2 : long long long long long int
 // 풀이 :
-let n = Int(readLine()!)!
+//let n = Int(readLine()!)!
+//
+//if(n >= 4 && n <= 1000 && n % 4 == 0) {
+//    let longCount = n / 4
+//    for _ in 1...longCount {
+//        print("long", terminator: " ")
+//    }
+//    print("int")
+//}
 
-if(n >= 4 && n <= 1000 && n % 4 == 0) {
-    let longCount = n / 4
-    for _ in 1...longCount {
-        print("long", terminator: " ")
-    }
-    print("int")
-}
+// 문제 : 빠른 A+B
+// 입력 : 첫 줄에 테스트케이스의 개수 T가 주어진다. T는 최대 1,000,000이다. 다음 T줄에는 각각 두 정수 A와 B가 주어진다. A와 B는 1이상, 1000이하이다.
+// 출력 : 각 테스트케이스마다 A+B를 한 줄에 하나씩 순서대로 출력한다.
+/* 예제 입력1 :
+ 5
+ 1 1
+ 12 34
+ 5 500
+ 40 60
+ 1000 1000 */
+/* 예제 출력1 :
+ 2
+ 46
+ 505
+ 100
+ 2000 */
+// 풀이 :
+//final class FileIO {
+//    private let buffer:[UInt8]
+//    private var index: Int = 0
+//    init(fileHandle: FileHandle = FileHandle.standardInput) {
+//        buffer = Array(try! fileHandle.readToEnd()!)+[UInt8(0)] // 인덱스 범위 넘어가는 것 방지
+//    }
+//    @inline(__always) private func read() -> UInt8 {
+//        defer { index += 1 }
+//        return buffer[index]
+//    }
+//    @inline(__always) func readInt() -> Int {
+//        var sum = 0
+//        var now = read()
+//        var isPositive = true
+//        while now == 10
+//                || now == 32 { now = read() } // 공백과 줄바꿈 무시
+//        if now == 45 { isPositive.toggle(); now = read() } // 음수 처리
+//        while now >= 48, now <= 57 {
+//            sum = sum * 10 + Int(now-48)
+//            now = read()
+//        }
+//        return sum * (isPositive ? 1:-1)
+//    }
+//    @inline(__always) func readString() -> String {
+//        var now = read()
+//        while now == 10 || now == 32 { now = read() } // 공백과 줄바꿈 무시
+//        let beginIndex = index-1
+//        while now != 10, now != 32, now != 0 { now = read() }
+//        return String(bytes: Array(buffer[beginIndex..<(index-1)]), encoding: .ascii)!
+//    }
+//    @inline(__always) func readByteSequenceWithoutSpaceAndLineFeed() -> [UInt8] {
+//        var now = read()
+//        while now == 10 || now == 32 { now = read() } // 공백과 줄바꿈 무시
+//        let beginIndex = index-1
+//        while now != 10, now != 32, now != 0 { now = read() }
+//        return Array(buffer[beginIndex..<(index-1)])
+//    }
+//}
+//let fIO = FileIO()
+//let n = fIO.readInt()
+//
+//for _ in 0..<n {
+//    var a = fIO.readInt() + fIO.readInt()
+//    print(a)
+//}
+
+
