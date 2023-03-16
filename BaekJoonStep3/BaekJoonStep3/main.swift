@@ -264,14 +264,37 @@ import Foundation
 // 입력 : 첫째 줄에 N(1 <= N <= 100)이 주어진다.
 // 출력 : 첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.
 // 풀이 :
-let n = Int(readLine()!)!
+//let n = Int(readLine()!)!
+//
+//for i in 1 ... n {
+//    for _ in 0 ..< (n-i) {
+//        print(" ", terminator: "")
+//    }
+//    for _ in 0 ..< i {
+//        print("*", terminator: "")
+//    }
+//    print("")
+//}
 
-for i in 1 ... n {
-    for _ in 0 ..< (n-i) {
-        print(" ", terminator: "")
+// 문제 : 두 정수 A와 B를 입력 받은 다음 A+B를 출력하는 프로그램을 작성하시오.
+/* 입력 : 입력은 여러개의 테스트 케이스로 이루어져 있다.
+ 각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
+ 입력의 마지막에는 0 두개가 들어온다. */
+// 출력 : 각 테스트 케이스마다 A+B를 출력한다.
+// 풀이 :
+var caseArr: [(Int, Int)] = []
+while(true) {
+    let line = readLine()!
+    let lineArr = line.components(separatedBy: " ")
+    let a = Int(lineArr[0])!
+    let b = Int(lineArr[1])!
+    if (a == 0 && b == 0) {
+        break;
+    } else {
+        caseArr.append((a,b))
     }
-    for _ in 0 ..< i {
-        print("*", terminator: "")
-    }
-    print("")
 }
+for i in 0...caseArr.count - 1 {
+    print(caseArr[i].0 + caseArr[i].1)
+}
+ 
