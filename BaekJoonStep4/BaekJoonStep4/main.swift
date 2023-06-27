@@ -84,8 +84,17 @@ import Foundation
 //       도현이는 입력으로 주어진 순서대로 공을 넣는다.
 // 출력 : 1번 바구니부터 N번 바구니에 들어있는 공의 번호를 공백으로 구분해 출력한다. 공이 들어있지 않은 바구니는 0을 출력한다.
 // 풀이 :
-let line = readLine()!
-let lineArr = line.components(separatedBy: " ")
-let basket = Int(lineArr[0])!
-let count = Int(lineArr[1])!
+let input = readLine()!.split(separator: " ").map { Int($0)! }
+let basket = input[0]
+let count = input[1]
+var basketArr = [Int](repeating: 0, count: basket + 1)
 
+for _ in 0..<count {
+    let line = readLine()!.split(separator: " ").map { Int($0)! }
+    let toBasket = line[0]
+    let fromBasket = line[1]
+    let ball = line[2]
+    basketArr.replaceSubrange(toBasket...fromBasket, with: [Int](repeating: ball, count: fromBasket - toBasket + 1))
+}
+
+basketArr[1...].forEach { print($0, terminator: " ") }
