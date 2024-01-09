@@ -7,16 +7,16 @@
 
 // 문제 : 1330 두 수 비교하기
 
-let line = readLine()!.split(separator: " ").map{ Int($0)! }
-let a = line[0], b = line[1]
-
-if(a < b) {
-    print("<")
-} else if(a > b) {
-    print(">")
-} else {
-    print("==")
-}
+//let line = readLine()!.split(separator: " ").map{ Int($0)! }
+//let a = line[0], b = line[1]
+//
+//if(a < b) {
+//    print("<")
+//} else if(a > b) {
+//    print(">")
+//} else {
+//    print("==")
+//}
 
 // 문제 : 9498 시험 성적
 
@@ -37,13 +37,10 @@ if(a < b) {
 // 문제 : 2753 윤년
 
 //let year = Int(readLine()!)!
-//
-//if(year >= 1 && year <= 4000) {
-//    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+//if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
 //        print("1")
-//    } else {
-//        print("0")
-//    }
+//} else {
+//    print("0")
 //}
 
 // 문제 : 14681 사분면 고르기

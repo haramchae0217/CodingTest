@@ -47,7 +47,7 @@
 // 문제 : 1157 단어 공부
 
 //let word = readLine()!.uppercased()
-//var dict: [Character: Int] = [:]
+//var dict = [Character: Int]()
 //
 //for i in word {
 //    if let value = dict[i] {
@@ -58,6 +58,10 @@
 //}
 //dict = dict.filter { $0.value == dict.values.max()! }
 //dict.count > 1 ? print("?") : print(dict.keys.first!)
+
+//let dict = Dictionary(readLine()!.uppercased().map { ($0, 1) }, uniquingKeysWith: +)
+//let maxValue = dict.filter { $0.value == dict.values.max()! }
+//maxValue.count > 1 ? print("?") : print(maxValue.keys.first!)
 
 // 문제 : 2941 크로아티아 알파벳
 
@@ -156,3 +160,60 @@
 //}
 //let value = score / sum
 //print(String(format: "%.6f", value))
+//
+//func addToScore(grade: String) -> Double {
+//    switch grade {
+//    case "A+":
+//        return 4.5
+//    case "A0":
+//        return 4.0
+//    case "B+":
+//        return 3.5
+//    case "B0":
+//        return 3.0
+//    case "C+":
+//        return 2.5
+//    case "C0":
+//        return 2.0
+//    case "D+":
+//        return 1.5
+//    case "D0":
+//        return 1.0
+//    case "F":
+//        return 0.0
+//    default:
+//        return 0.0
+//    }
+//}
+//
+//var totalScore: Double = 0
+//var totalGrade: Double = 0
+//
+//for _ in 0...19 {
+//    let input = readLine()!.split(separator: " ")
+//    
+//    if input[2] != "P" {
+//        totalScore += Double(input[1])!
+//        totalGrade += (Double(input[1])! * addToScore(grade: String(input[2])))
+//    }
+//}
+//
+//print(totalGrade / totalScore)
+
+//let dict: [String: Double] = [
+//    "A+": 4.5, "A0": 4.0, "B+": 3.5, "B0": 3.0,
+//    "C+": 2.5, "C0": 2.0, "D+": 1.5, "D0": 1.0, "F": 0
+//]
+//
+//var totalScore: Double = 0
+//var totalGrade: Double = 0
+//
+//for _ in 0...19 {
+//    let input = readLine()!.split(separator: " ").map { String($0) }
+//    if let score = dict[input[2]] {
+//        totalGrade += Double(input[1])! * score
+//        totalScore += Double(input[1])!
+//    }
+//}
+//
+//print(totalGrade / totalScore)

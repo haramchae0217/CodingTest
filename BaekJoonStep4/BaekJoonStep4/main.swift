@@ -38,24 +38,19 @@
 
 //let n: Int = Int(readLine()!)!
 //let numbers: [Int] = readLine()!.split(separator: " ").map { Int(String($0))! }
-//
+//numbers.min()
 //print(numbers.min()!, numbers.max()!)
 
 // 문제 : 2562 최댓값
 
-//var arr: [Int] = []
-//for _ in 0..<9 {
-//    let n = Int(readLine()!)!
-//    arr.append(n)
+//var arr = [Int]()
+//for _ in 1...9 {
+//    arr.append(Int(readLine()!)!)
 //}
-//var index = 0
-//for i in 0..<9 {
-//    if arr.max()! == arr[i] {
-//        index = i + 1
-//    }
-//}
+//
 //print(arr.max()!)
-//print(index)
+//print(arr.firstIndex(of: arr.max()!)! + 1)
+
 
 // 문제 : 10810 공 넣기
 
