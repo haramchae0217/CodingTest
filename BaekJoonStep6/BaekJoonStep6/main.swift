@@ -118,87 +118,80 @@
 
 // 문제 : 25206 너의 평점은
 
-//var score = 0.0
-//var sum = 0.0
-//
-//for _ in 0...19 {
-//    let subject = readLine()!
-//    let subjectArr = subject.components(separatedBy: " ")
-//    switch subjectArr[2] {
-//    case "A+":
-//        score += Double(subjectArr[1])! * 4.5
-//        sum += Double(subjectArr[1])!
-//    case "A0":
-//        score += Double(subjectArr[1])! * 4.0
-//        sum += Double(subjectArr[1])!
-//    case "B+":
-//        score += Double(subjectArr[1])! * 3.5
-//        sum += Double(subjectArr[1])!
-//    case "B0":
-//        score += Double(subjectArr[1])! * 3.0
-//        sum += Double(subjectArr[1])!
-//    case "C+":
-//        score += Double(subjectArr[1])! * 2.5
-//        sum += Double(subjectArr[1])!
-//    case "C0":
-//        score += Double(subjectArr[1])! * 2.0
-//        sum += Double(subjectArr[1])!
-//    case "D+":
-//        score += Double(subjectArr[1])! * 1.5
-//        sum += Double(subjectArr[1])!
-//    case "D0":
-//        score += Double(subjectArr[1])! * 1.0
-//        sum += Double(subjectArr[1])!
-//    case "F":
-//        sum += Double(subjectArr[1])!
-//    case "P":
-//        sum += 0.0
-//    default:
-//        print("잘못된 학점 입력")
-//    }
-//    
-//}
-//let value = score / sum
-//print(String(format: "%.6f", value))
-//
-//func addToScore(grade: String) -> Double {
-//    switch grade {
-//    case "A+":
-//        return 4.5
-//    case "A0":
-//        return 4.0
-//    case "B+":
-//        return 3.5
-//    case "B0":
-//        return 3.0
-//    case "C+":
-//        return 2.5
-//    case "C0":
-//        return 2.0
-//    case "D+":
-//        return 1.5
-//    case "D0":
-//        return 1.0
-//    case "F":
-//        return 0.0
-//    default:
-//        return 0.0
-//    }
-//}
-//
-//var totalScore: Double = 0
-//var totalGrade: Double = 0
-//
-//for _ in 0...19 {
-//    let input = readLine()!.split(separator: " ")
-//    
-//    if input[2] != "P" {
-//        totalScore += Double(input[1])!
-//        totalGrade += (Double(input[1])! * addToScore(grade: String(input[2])))
-//    }
-//}
-//
-//print(totalGrade / totalScore)
+func addToScore(score: String) -> Double {
+    switch score {
+    case "A+":
+        return 4.5
+    case "A0":
+        return 4.0
+    case "B+":
+        return 3.5
+    case "B0":
+        return 3.0
+    case "C+":
+        return 2.5
+    case "C0":
+        return 2.0
+    case "D+":
+        return 1.5
+    case "D0":
+        return 1.0
+    case "F":
+        return 0.0
+    default:
+        print("잘못된 학점 입력")
+    }
+}
+
+var totalGrade: Double = 0.0
+var totalScore: Double = 0.0
+
+for _ in 0...19 {
+    let input = readLine()!.split(separator: " ")
+    totalGrade += Double(input[1])! * addToScore(score: String(input[2]))
+    totalScore += Double(input[1])!
+}
+print(totalGrade / totalScore)
+
+
+func addToScore(grade: String) -> Double {
+    switch grade {
+    case "A+":
+        return 4.5
+    case "A0":
+        return 4.0
+    case "B+":
+        return 3.5
+    case "B0":
+        return 3.0
+    case "C+":
+        return 2.5
+    case "C0":
+        return 2.0
+    case "D+":
+        return 1.5
+    case "D0":
+        return 1.0
+    case "F":
+        return 0.0
+    default:
+        return 0.0
+    }
+}
+
+var totalScore: Double = 0
+var totalGrade: Double = 0
+
+for _ in 0...19 {
+    let input = readLine()!.split(separator: " ")
+    
+    if input[2] != "P" {
+        totalScore += Double(input[1])!
+        totalGrade += (Double(input[1])! * addToScore(grade: String(input[2])))
+    }
+}
+
+print(totalGrade / totalScore)
 
 //let dict: [String: Double] = [
 //    "A+": 4.5, "A0": 4.0, "B+": 3.5, "B0": 3.0,
