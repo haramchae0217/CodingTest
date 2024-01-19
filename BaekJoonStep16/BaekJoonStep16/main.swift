@@ -254,14 +254,15 @@
 
 let input = readLine()!.split(separator: " ").map { Int($0)! }
 let n = input[0], k = input[1]
-var arr = Array(1...n)
+var arr = [Int](1...n)
 var josephus = [Int]()
+var index = 0
 
-while true {
-    josephus.append(arr[k-1])
-    arr[k-1] = 0
-    
+while !arr.isEmpty {
+    index = (index + k - 1) % arr.count
+    josephus.append(arr.remove(at: index))
 }
 
+print("<\(josephus.map { String($0) }.joined(separator: ", "))>")
 
 
