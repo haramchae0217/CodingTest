@@ -252,17 +252,38 @@
 
 // 문제 : 11866 요세푸스 문제 0
 
-let input = readLine()!.split(separator: " ").map { Int($0)! }
-let n = input[0], k = input[1]
-var arr = [Int](1...n)
-var josephus = [Int]()
-var index = 0
+//let input = readLine()!.split(separator: " ").map { Int($0)! }
+//let n = input[0], k = input[1]
+//var arr = [Int](1...n)
+//var josephus = [Int]()
+//var index = 0
+//
+//while !arr.isEmpty {
+//    index = (index + k - 1) % arr.count
+//    josephus.append(arr.remove(at: index))
+//}
+//
+//print("<\(josephus.map { String($0) }.joined(separator: ", "))>")
 
-while !arr.isEmpty {
-    index = (index + k - 1) % arr.count
-    josephus.append(arr.remove(at: index))
+// 문제 : 28279 덱 2
+
+let n = Int(readLine()!)!
+var arr = [Int]()
+
+for _ in 1...n {
+    let input = readLine()!.split(separator: " ").map { Int($0)! }
+    let n = input[0], m = input[1]
+    switch n {
+    case 1:
+        
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+    default: fatalError()
+    }
 }
-
-print("<\(josephus.map { String($0) }.joined(separator: ", "))>")
-
 
